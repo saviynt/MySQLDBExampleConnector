@@ -30,7 +30,10 @@
 			<systemPath>${project.basedir}/lib/abstractConnector-8.10.3.jar</systemPath>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
