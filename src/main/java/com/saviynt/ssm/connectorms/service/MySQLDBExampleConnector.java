@@ -128,22 +128,8 @@ public class MySQLDBExampleConnector extends BaseConnectorSpecification {
 		connectionAttributes.add("password");
 		connectionAttributes.add("url");
 		connectionAttributes.add("ReconcileJSON");
-		connectionAttributes.add("RemoveAccountJSON");
-		connectionAttributes.add("RemoveAccessToAccountJSON");
-		connectionAttributes.add("AddAccessToAccountJSON");
-		connectionAttributes.add("UpdateAccountJSON");
 		connectionAttributes.add("CreateAccountJSON");
-		connectionAttributes.add("LockAccountJSON");
-		connectionAttributes.add("DisableAccountJSON");
-		connectionAttributes.add("EnableAccountJSON");
-		connectionAttributes.add("TerminateAccountJSON");
-		connectionAttributes.add("UnlockAccountJSON");
-		connectionAttributes.add("CreateUserJSON");
-		connectionAttributes.add("UpdateUserJSON");
-		connectionAttributes.add("UpdateEntitlementJSON");
-		connectionAttributes.add("CreateEntitlementJSON");
-		connectionAttributes.add("ChangePasswordJSON");
- 
+		
 		List<String> requiredConnectionAttributes = configData.getRequiredConnectionAttributes();
 		requiredConnectionAttributes.add("drivername");
 		requiredConnectionAttributes.add("username");
@@ -166,17 +152,8 @@ public class MySQLDBExampleConnector extends BaseConnectorSpecification {
 		}
 		jsonObject.put("ReconcileJSON",
 				"SAMPLE JSON For    {'updatedUser':'SaviyntAdmin','reconType':'fullrecon','query':'  select * from accountrecon ','endpointId':61,'formatterClass':'com.saviynt.ssm.abstractConnector.AbstractFormatter','mapper':{'accounts':[{'saviyntproperty':'name','sourceproperty':'${accountName}'}],'account_attributes':[{'saviyntproperty':'attribute_name','sourceproperty':'${Emailaddress}'}],'account_entitlements':[{'saviyntproperty':'entitlementtype','sourceproperty':'${group}'},{'saviyntproperty':'entitlement_value','sourceproperty':'${entitlementVal}'},{'saviyntproperty':'name','sourceproperty':'${accountName}'}]}}");
-		jsonObject.put("RemoveAccessToAccountJSON", "SAMPLE JSON For    {'query':['Valid Sql Query']} ");
-		jsonObject.put("RemoveAccountJSON", "SAMPLE JSON For    {'query':['Valid Sql Query']}");
-		jsonObject.put("AddAccessToAccountJSON", "SAMPLE JSON  {'query':['Valid Sql Query']}");
 		jsonObject.put("CreateAccountJSON", "SAMPLE JSON   {'query':['Valid Sql Query']}");
-		jsonObject.put("CreateUserJSON", "SAMPLE JSON   {'query':['Valid Sql Query']}");
-		jsonObject.put("UpdateUserJSON", "SAMPLE JSON   {'query':['Valid Sql Query']}");
-		jsonObject.put("UpdateEntitlementJSON", "SAMPLE JSON   {'query':['Valid Sql Query']}");
-		jsonObject.put("CreateEntitlementJSON", "SAMPLE JSON   {'query':['Valid Sql Query']}");
-		jsonObject.put("ChangePasswordJSON", "SAMPLE JSON   {'query':['Valid Sql Query']}");
-
-			configData.setConnectionAttributesDescription(jsonObject.toString());		
+		configData.setConnectionAttributesDescription(jsonObject.toString());		
 	}
 	/**
 	 * to process reconcile for users and accounts
