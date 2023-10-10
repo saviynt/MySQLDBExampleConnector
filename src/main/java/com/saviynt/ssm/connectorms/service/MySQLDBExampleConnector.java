@@ -91,9 +91,11 @@ public class MySQLDBExampleConnector extends BaseConnectorSpecification {
 	 * @throws MissingKeyException the missing key exception
 	 */
 	@Override
-	public Boolean test(Map<String, Object> configData, Map<String, Object> data) throws ConnectorException,
+	public Map test(Map<String, Object> configData, Map<String, Object> data) throws ConnectorException,
 			InvalidCredentialException, InvalidAttributeValueException, OperationTimeoutException, MissingKeyException {
-		return true;
+		Map respMap = new HashMap();
+		respMap.put("status", true);
+		return respMap;
 
 	}
 	/**

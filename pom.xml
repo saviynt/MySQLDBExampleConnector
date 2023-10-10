@@ -25,9 +25,9 @@
 		<dependency>
 			<groupId>com.saviynt.ssm</groupId>
 			<artifactId>abstractConnector</artifactId>
-			<version>8.10.3</version>
+			<version>8.11.1</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/abstractConnector-8.10.3.jar</systemPath>
+			<systemPath>${project.basedir}/lib/abstractConnector-8.11.1.jar</systemPath>
 		</dependency>
 
 		<dependency>
